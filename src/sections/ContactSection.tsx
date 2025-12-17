@@ -2,7 +2,7 @@ import { InlineWidget } from "react-calendly";
 import React from 'react';
 import { Linkedin, Github, Mail, Phone } from 'lucide-react';
 // Added image import
-import groupImage from '../assets/groupImage.jpg'; 
+import group from '../assets/group.jpg'; 
 
 const ContactSection: React.FC = () => {
   return (
@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
 
             <div className="mt-12 overflow-hidden border rounded-2xl border-gray-800/50">
               <img 
-                src={groupImage} 
+                src={group} 
                 alt="Contact visual" 
                 className="object-cover w-full h-auto transition-opacity duration-500 opacity-80 hover:opacity-100"
               />
