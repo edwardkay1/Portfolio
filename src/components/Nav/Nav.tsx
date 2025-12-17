@@ -6,7 +6,6 @@ const navItems = [
   { name: 'Services', href: '#services' },
   { name: 'Projects', href: '#projects' },
   { name: 'About', href: '#about' },
-  { name: 'FAQs', href: '#faqs' },
 ];
 
 const Navbar: React.FC = () => {
@@ -23,23 +22,23 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm shadow-md transition-shadow duration-300">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="sticky top-0 z-50 transition-shadow duration-300 shadow-md bg-black/90 backdrop-blur-sm">
+      <div className="container flex items-center justify-between px-4 py-4 mx-auto">
         
         {/* Logo/Name */}
-        <a href="#home" className="text-2xl font-bold text-white tracking-wider hover:text-teal-400 transition duration-300">
+        <a href="#home" className="text-2xl font-bold tracking-wider text-white transition duration-300 hover:text-teal-400">
           Edward<span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500'>kay</span>
         </a>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="items-center hidden space-x-6 md:flex">
           <ul className="flex space-x-6 text-gray-300">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a 
                   href={item.href} 
                   onClick={(e) => handleNavItemClick(e, item.href)}
-                  className="text-sm font-medium hover:text-teal-400 transition duration-300 relative group"
+                  className="relative text-sm font-medium transition duration-300 hover:text-teal-400 group"
                 >
                   {item.name}
                   {/* Underline Hover Effect */}
@@ -53,14 +52,14 @@ const Navbar: React.FC = () => {
           <a 
             href="#contact" 
             onClick={(e) => handleNavItemClick(e, '#contact')}
-            className="ml-6 px-4 py-2 border border-white text-white text-sm font-medium hover:bg-white hover:text-black transition duration-300"
+            className="px-4 py-2 ml-6 text-sm font-medium text-white transition duration-300 border border-white hover:bg-white hover:text-black"
           >
             Contact
           </a>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        <button className="text-white md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -71,13 +70,13 @@ const Navbar: React.FC = () => {
           isOpen ? 'max-h-screen opacity-100 py-4' : 'max-h-0 opacity-0'
         } bg-black/90 border-t border-gray-800`}
       >
-        <ul className="flex flex-col space-y-3 px-4 text-white">
+        <ul className="flex flex-col px-4 space-y-3 text-white">
           {navItems.map((item) => (
             <li key={item.name}>
               <a 
                 href={item.href} 
                 onClick={(e) => handleNavItemClick(e, item.href)}
-                className="block py-2 text-lg font-medium hover:text-teal-400 transition duration-300"
+                className="block py-2 text-lg font-medium transition duration-300 hover:text-teal-400"
               >
                 {item.name}
               </a>
@@ -87,7 +86,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#contact" 
               onClick={(e) => handleNavItemClick(e, '#contact')}
-              className="block py-2 text-lg font-medium text-teal-400 hover:text-white transition duration-300"
+              className="block py-2 text-lg font-medium text-teal-400 transition duration-300 hover:text-white"
             >
               Contact
             </a>

@@ -1,99 +1,83 @@
+import { InlineWidget } from "react-calendly";
 import React from 'react';
-import { Linkedin, Github, Twitter, Facebook } from 'lucide-react';
+import { Linkedin, Github, Mail, Phone } from 'lucide-react';
+// Added image import
+import groupImage from '../assets/groupImage.jpg'; 
 
 const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="container max-w-6xl px-4 mx-auto">
+        <div className="grid items-start grid-cols-1 gap-12 md:grid-cols-2">
           
           {/* Left Column: Heading and Socials */}
-          <div>
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-2">Contact me</p>
-            <h2 className="text-5xl font-bold text-white mb-6">
+          <div className="px-4 py-16 text-center md:text-left">
+            <p className="mb-2 text-sm tracking-widest text-gray-400 uppercase">
+              Contact me
+            </p>
+            <h2 className="mb-6 text-5xl font-bold text-white">
               Get in touch
             </h2>
-            <p className="text-gray-400 text-lg mb-8 max-w-md">
-              It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you.
+            <p className="max-w-md mb-8 text-lg text-gray-400">
+              I’m always ready to answer questions or discuss new projects. Feel free to reach out via social media, email, or WhatsApp.
             </p>
 
-            {/* Social Icons - UPDATED WITH rel="noopener noreferrer" */}
-            <div className="flex space-x-4">
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer" // <-- ADDED SECURITY
-                className="p-3 border border-gray-800 text-gray-400 rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors duration-300"
-              >
+            <div className="flex flex-wrap justify-center gap-4 md:justify-start">
+              <a href="https://www.linkedin.com/in/edwardkay1" className="p-3 text-gray-400 transition-colors border border-gray-800 rounded-full hover:border-teal-400 hover:text-teal-400">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer" // <-- ADDED SECURITY
-                className="p-3 border border-gray-800 text-gray-400 rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors duration-300"
-              >
+              <a href="https://github.com/edwardkay1" className="p-3 text-gray-400 transition-colors border border-gray-800 rounded-full hover:border-teal-400 hover:text-teal-400">
                 <Github className="w-5 h-5" />
               </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer" // <-- ADDED SECURITY
-                className="p-3 border border-gray-800 text-gray-400 rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors duration-300"
-              >
-                <Twitter className="w-5 h-5" />
+              <a href="https://x.com/iam_ed_wa_rd" className="p-3 text-gray-400 transition-colors border border-gray-800 rounded-full hover:border-teal-400 hover:text-teal-400">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z" /></svg>
               </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer" // <-- ADDED SECURITY
-                className="p-3 border border-gray-800 text-gray-400 rounded-full hover:border-teal-400 hover:text-teal-400 transition-colors duration-300"
-              >
-                <Facebook className="w-5 h-5" />
+              <a href="mailto:edwardbrin1@gmail.com" className="p-3 text-gray-400 transition-colors border border-gray-800 rounded-full hover:border-teal-400 hover:text-teal-400">
+                <Mail className="w-5 h-5" />
               </a>
+              <a href="tel:+256746838046" className="p-3 text-gray-400 transition-colors border border-gray-800 rounded-full hover:border-teal-400 hover:text-teal-400">
+                <Phone className="w-5 h-5" />
+              </a>
+            </div>
+
+            {/* Added Image Below Icons to fill space */}
+            <div className="mt-12 overflow-hidden border rounded-2xl border-gray-800/50">
+              <img 
+                src={groupImage} 
+                alt="Contact visual" 
+                className="object-cover w-full h-auto transition-opacity duration-500 opacity-80 hover:opacity-100"
+              />
             </div>
           </div>
           
-          {/* Right Column: Contact Form */}
-          <div>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input 
-                  type="text" 
-                  placeholder="Full name" 
-                  className="bg-black border-b border-gray-700 text-white placeholder-gray-500 py-3 focus:border-teal-400 focus:outline-none transition-colors" 
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email address" 
-                  className="bg-black border-b border-gray-700 text-white placeholder-gray-500 py-3 focus:border-teal-400 focus:outline-none transition-colors" 
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  className="bg-black border-b border-gray-700 text-white placeholder-gray-500 py-3 focus:border-teal-400 focus:outline-none transition-colors" 
-                />
-                <input 
-                  type="text" 
-                  placeholder="Subject" 
-                  className="bg-black border-b border-gray-700 text-white placeholder-gray-500 py-3 focus:border-teal-400 focus:outline-none transition-colors" 
-                />
-              </div>
-              <textarea 
-                placeholder="Write your message here" 
-                rows={4}
-                className="w-full bg-black border-b border-gray-700 text-white placeholder-gray-500 py-3 focus:border-teal-400 focus:outline-none transition-colors resize-none"
-              ></textarea>
-              <button 
-                type="submit" 
-                className="px-8 py-3 bg-white text-black font-semibold hover:bg-teal-400 transition duration-300"
-              >
-                Send Message
-              </button>
-            </form>
+          {/* Right Column: Calendly - Adjusted to match left height */}
+          <div className="px-4 py-16">
+            <p className="mb-2 text-sm tracking-widest text-gray-400 uppercase">
+              Book a Call
+            </p>
+            <h2 className="mb-6 text-5xl font-bold text-white">
+              Schedule a Meeting
+            </h2>
+            <p className="max-w-md mb-8 text-lg text-gray-400">
+              Pick a convenient time and let's talk about your project.
+            </p>
+
+            {/* Reduced height container to match screenshot proportion */}
+            <div className="overflow-hidden rounded-lg border border-gray-800 bg-black h-[450px]">
+              <InlineWidget 
+                url="https://calendly.com/edwardkay1" 
+                styles={{ height: '450px' }}
+                pageSettings={{
+                  backgroundColor: '000000',
+                  hideEventTypeDetails: false,
+                  hideLandingPageDetails: true, 
+                  primaryColor: '2dd4bf',
+                  textColor: 'ffffff'
+                }}
+              />
+            </div>
           </div>
+
         </div>
       </div>
     </section>

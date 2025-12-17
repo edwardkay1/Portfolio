@@ -7,41 +7,27 @@ import Footer from './components/Footer/Footer';
 // Sections
 import ServicesSection from './sections/ServicesSection';
 import ProjectsSection from './sections/ProjectsSection';
-import ContactSection from './sections/ContactSection'; // NEW
-import AboutSection from './sections/AboutSection'; // NEW
-import FAQSection from './sections/FAQSection'; // NEW
+import ContactSection from './sections/ContactSection'; 
+import FAQSection from './sections/FAQSection';
+import AboutSection from './sections/AboutSection';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen font-sans text-white bg-black">
       
-      {/* 1. Navigation */}
       <Navbar /> 
-
       <main>
-        {/* 2. Hero Section (Home/Introduction) */}
+        
         <section id="home">
-            <Hero />
+        <Hero />
         </section>
-        
-        {/* 3. Services Section */}
         <ServicesSection />
-
-        {/* 4. Projects/Designs Section */}
         <ProjectsSection />
-
-        
-
-<AboutSection />
-        {/* 6. FAQ Section */}
+        <AboutSection />
         <FAQSection />
-
-        {/* 7. Contact Section */}
         <ContactSection />
         
       </main>
-
-      {/* 8. Footer */}
       <Footer />
     </div>
   );

@@ -1,55 +1,89 @@
-// Define interfaces for type safety
+import shamiImage from '../assets/shami.png'; // ✅ correct way in Vite
+import owojaImage from '../assets/owojaImage.png'; // ✅ correct way in Vite
+import kamuImage from '../assets/kamuImage.png'; // ✅ correct way in Vite
+import nkoziImage from '../assets/nkozi.png'; // ✅ correct way in Vite
+import oldImage from '../assets/redesign.jpg'; // ✅ correct way in Vite
+
+
 export interface Project {
   id: number;
   title: string;
   client: string;
   description: string;
+  role: string;
+  stack: string[];
   liveLink: string;
-  isDesign: boolean; // True for the "Creative Designs" section
+  githubLink: string;
+  isDesign: boolean;
   imagePath: string;
-  githubLink: string; // Will use shami.png for demo
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'MSCSC Website',
-    client: 'MSCSC',
-    description: 'A vibrant React/Node website celebrating science, math, and space exploration. The platform features engaging events, exclusive member profiles, and forums to foster community and inspire learning.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Shami Global Shop',
+    client: 'Shami Global Shop',
+    description:
+      'A modern e-commerce website designed to showcase products and enable fast ordering through WhatsApp integration.',
+    role: 'Frontend Developer',
+    stack: ['React', 'Tailwind CSS', 'Git'],
+    liveLink: 'https://shamiglobal-shop.vercel.app/',
+    githubLink: 'https://github.com/edwardkay1/Shami-Global-Shop',
     isDesign: false,
-    imagePath: '/assets/images/shami.png', // Placeholder image
+    imagePath:  shamiImage,
   },
   {
     id: 2,
-    title: 'Weather Compass',
-    client: 'Private Client',
-    description: 'A sleek, mobile-first weather application built with a modern framework that provides real-time forecasts, radar maps, and severe weather alerts.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Owoja Engineering Systems',
+    client: 'Owoja Engineering Systems',
+    description:
+      'A professional corporate website built to present company services, projects, and credibility to potential clients.',
+    role: 'Frontend Developer',
+    stack: ['WordPress', 'PHP', 'Custom UI'],
+    liveLink: 'https://owojaengineering.com/',
+    githubLink: 'https://github.com/edwardkay1',
     isDesign: false,
-    imagePath: '/assets/images/shami.png', 
+    imagePath: owojaImage,
   },
-  // --- Creative Designs ---
+
+  // --- Creative / Design Projects ---
   {
     id: 3,
-    title: 'ASTRO E-commerce Checkout',
-    client: 'ASTRO Mart',
-    description: 'Checkout page designed for optimizing the user purchase journey. From Astro Mart which is a high quality e-commerce website featuring new and high-quality products.',
-    liveLink: '#',
+    title: 'Kamu Eco Resort',
+    client: 'Kamu Eco Resort',
+    description:
+      'A visually focused website design highlighting eco-friendly accommodations and nature-driven experiences.',
+    role: 'UI / Frontend Design',
+    stack: ['UI Design', 'Responsive Layout'],
+    liveLink: 'https://kamuecoresort.com/',
+    githubLink: 'https://github.com/edwardkay1',
     isDesign: true,
-    githubLink: '#',
-    imagePath: '/assets/images/shami.png', 
+    imagePath: kamuImage,
   },
   {
     id: 4,
-    title: 'Admin Panel Dashboard',
-    client: 'MSCSC',
-    description: 'A clean and intuitive Admin Panel dashboard for MSCSC management, enabling efficient updates to events and content. A reliable and user-friendly tool for the team to keep the site dynamic.',
-    liveLink: '#',
-    githubLink: '#',
+    title: 'Nkozi Mart',
+    client: 'Personal Project',
+    description:
+      'A clean e-commerce interface focused on usability and modern shopping experience for local customers.',
+    role: 'Frontend Developer',
+    stack: ['React', 'Tailwind CSS'],
+    liveLink: 'https://nkozi-mart.vercel.app/',
+    githubLink: 'https://github.com/edwardkay1/Nkozi-Mart',
     isDesign: true,
-    imagePath: '/assets/images/shami.png', 
+    imagePath: nkoziImage,
+  },
+  {
+    id: 5,
+    title: 'Redesign Project',
+    client: 'Personal Project',
+    description:
+      'A redesign of my earlier portfolio, reflecting growth in layout structure, visual hierarchy, and UI consistency.',
+    role: 'Designer & Developer',
+    stack: ['React', 'Tailwind CSS'],
+    liveLink: 'https://kayiira-edward.vercel.app/',
+    githubLink: 'https://github.com/edwardkay1/kayiira-edward',
+    isDesign: true,
+    imagePath: oldImage,
   },
 ];
