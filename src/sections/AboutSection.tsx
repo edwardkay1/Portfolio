@@ -1,9 +1,9 @@
 import React from 'react';
-import aboutImage from '../assets/aboutImage.jpg'; // ✅ correct way in Vite
+import aboutImage from '../assets/aboutImage.jpg'; 
 
 const AboutSection: React.FC = () => {
   return (
-    // 5. About/Profile Section (Refined from previous placeholder)
+    // About Section 
     <section id="about" className="py-20">
       <div className="container flex flex-wrap items-center max-w-6xl gap-12 px-4 mx-auto md:flex-nowrap">
         {/* Image (shami.png) */}

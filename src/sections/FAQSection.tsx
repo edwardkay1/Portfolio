@@ -5,12 +5,11 @@ import { faqsData } from '../data/faqs';
 const FAQSection: React.FC = () => {
   return (
     <section id="faqs" className="py-20 bg-black">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+      <div className="container max-w-4xl px-4 mx-auto">
+        <h2 className="mb-16 text-4xl font-bold text-center text-white md:text-5xl">
           Frequently Asked Questions
         </h2>
         
-        {/* FAQ Grid Layout - Mimics the inspiration's two-column structure */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
           
           {/* Column 1 (First half of FAQs) */}

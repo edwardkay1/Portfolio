@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 gap-12 pb-12 border-b border-gray-800 md:grid-cols-4">
           
-          {/* Col 1: Bio & Resume (No changes here, as the resume link doesn't use target="_blank") */}
           <div className="md:col-span-2">
   <h3 className="mb-4 text-xl font-bold text-white">Beyond the Code</h3>
   <p className="mb-4 text-sm text-gray-400">
@@ -18,9 +17,7 @@ const Footer: React.FC = () => {
 </div>
 
 
-
-
-          {/* Col 2: Contact Info (No external link issues here) */}
+         {/* Contact Info (No external link issues here) */}
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">Contact me</h4>
             <div className="space-y-3 text-sm">
@@ -39,7 +36,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 3: Menu Links (No external link issues here) */}
+          {/* Menu Links (No external link issues here) */}
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-wider text-white uppercase">Menu</h4>
             <ul className="space-y-2 text-sm">

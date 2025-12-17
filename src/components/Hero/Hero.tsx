@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin } from 'lucide-react';
 
 const Hero = () => {
@@ -23,20 +22,18 @@ const Hero = () => {
         <div className="flex justify-center space-x-4">
           <a 
             href="#projects" 
-            onClick={(e) => handleNavItemClick(e, '#contact')}
             className="px-6 py-3 font-medium text-white transition duration-300 ease-in-out border border-white hover:bg-white hover:text-black">
             View Projects
           </a>
           <a 
             href="#contact" 
-            onClick={(e) => handleNavItemClick(e, '#contact')}
             className="px-6 py-3 font-medium text-gray-300 transition duration-300 ease-in-out border border-gray-700 hover:border-white hover:text-white">
             Book a Call
           </a>
 
         </div>
 
-        {/* Technologies I Use - Simplified for Hero */}
+        {/* Technologies I Use */}
         <div className="pt-8 mt-16 border-t border-gray-800">
   <h3 className="mb-6 text-sm tracking-wider text-center text-gray-400 uppercase">
     Technologies I Use
@@ -64,15 +61,6 @@ const Hero = () => {
     <span className="text-gray-500 transition-colors duration-300 cursor-default hover:text-teal-400">
       Git
     </span>
-    {/* <span className="text-gray-500 transition-colors duration-300 cursor-default hover:text-teal-400">
-      Postman
-    </span>
-    <span className="text-gray-500 transition-colors duration-300 cursor-default hover:text-teal-400">
-      Vs Code
-    </span>
-    <span className="text-gray-500 transition-colors duration-300 cursor-default hover:text-teal-400">
-      Chrome DevTools
-    </span> */}
     
 
     {/* Supporting Skills */}

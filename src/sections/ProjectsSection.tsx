@@ -24,10 +24,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-black">
       <div className="container max-w-6xl px-4 mx-auto">
-        
-        {/* ======================================= */}
         {/* 1. Main Projects List (Standard Vertical) */}
-        {/* ======================================= */}
         <h2 className="mb-12 text-4xl font-bold text-white md:text-5xl">
           Selected Client Work
         </h2>
@@ -39,9 +36,7 @@ const ProjectsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* ======================================= */}
         {/* 2. Creative Designs Carousel (Horizontal Scroll) */}
-        {/* ======================================= */}
         <h2 className="mb-8 text-4xl font-bold text-white md:text-5xl">
           Additional Client Projects
         </h2>

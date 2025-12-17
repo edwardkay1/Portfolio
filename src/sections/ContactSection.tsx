@@ -40,7 +40,7 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
 
-            {/* Added Image Below Icons to fill space */}
+
             <div className="mt-12 overflow-hidden border rounded-2xl border-gray-800/50">
               <img 
                 src={groupImage} 
@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Right Column: Calendly - Adjusted to match left height */}
+          {/* Right Column: Calendly */}
           <div className="px-4 py-16">
             <p className="mb-2 text-sm tracking-widest text-gray-400 uppercase">
               Book a Call
@@ -62,7 +62,7 @@ const ContactSection: React.FC = () => {
               Pick a convenient time and let's talk about your project.
             </p>
 
-            {/* Reduced height container to match screenshot proportion */}
+
             <div className="overflow-hidden rounded-lg border border-gray-800 bg-black h-[450px]">
               <InlineWidget 
                 url="https://calendly.com/edwardkay1" 

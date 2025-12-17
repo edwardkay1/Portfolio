@@ -1,19 +1,14 @@
-// src/data/services.ts
-
-// 1. Use 'import type' for LucideIcon, as it is only used as a type.
-// All the icon components (Code, Monitor, Zap) are values, so they use the standard import.
 import { Code, Monitor, Layout } from 'lucide-react'; 
 import type { LucideIcon } from 'lucide-react';
 
-// 2. Define and EXPORT the Service interface
+//Service interface
 export interface Service {
-  // Use LucideIcon as the type for the icon component
   icon: LucideIcon; 
   title: string;
   description: string;
 }
 
-// 3. Export the data array
+//Data array
 export const servicesData: Service[] = [
   {
     icon: Code,

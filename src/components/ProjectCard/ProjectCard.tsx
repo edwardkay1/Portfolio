@@ -1,6 +1,6 @@
 import React from 'react';
 // NOTE: Adjust the path below if your projects type is not in a 'data' folder
-import type { Project } from '../data/projects'; 
+import type { Project } from '../../data/projects';
 import {Github, ExternalLink } from 'lucide-react'; 
 // NOTE: I'm using ExternalLink for the View Demo button
 
@@ -18,20 +18,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
   if (isDesign) {
     // Layout for the Creative Designs Carousel
     return (
-      <div className="flex flex-col w-96 p-4">
+      <div className="flex flex-col p-4 w-96">
         <div className="bg-gray-800 rounded-lg overflow-hidden mb-4 transition-transform duration-500 hover:scale-[1.03] group">
           <img 
             src={project.imagePath} 
             alt={project.title} 
-            className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+            className="object-cover w-full h-auto transition-opacity duration-500 opacity-80 group-hover:opacity-100"
           />
         </div>
-        <p className="text-gray-400 text-xs mb-1 uppercase tracking-widest">{project.client}</p>
-        <h4 className="text-xl font-semibold text-white mb-2">{project.title}</h4>
-        <p className="text-gray-500 text-sm mb-4">{project.description}</p>
+        <p className="mb-1 text-xs tracking-widest text-gray-400 uppercase">{project.client}</p>
+        <h4 className="mb-2 text-xl font-semibold text-white">{project.title}</h4>
+        <p className="mb-4 text-sm text-gray-500">{project.description}</p>
         
-        {/* UPDATED: View Demo and GitHub Buttons (Design Layout) */}
-        <div className="flex space-x-3 mt-2">
+        {/* View Demo and GitHub Buttons */}
+        <div className="flex mt-2 space-x-3">
             {project.liveLink && (
               <a 
                 href={project.liveLink} 
@@ -59,19 +59,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
     );
   }
 
-  // Layout for the Main Projects List
+  //Main Projects List
   return (
-    <div className="py-6 border-b border-gray-800 group hover:border-teal-500 transition-colors duration-500 cursor-pointer">
-      <div className="flex justify-between items-start">
+    <div className="py-6 transition-colors duration-500 border-b border-gray-800 cursor-pointer group hover:border-teal-500">
+      <div className="flex items-start justify-between">
         <div className="flex-1">
-          <p className="text-sm text-gray-400 uppercase tracking-widest mb-1">{project.client}</p>
-          <h4 className="text-2xl font-semibold text-white mb-2 group-hover:text-teal-400 transition-colors duration-300">
+          <p className="mb-1 text-sm tracking-widest text-gray-400 uppercase">{project.client}</p>
+          <h4 className="mb-2 text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-teal-400">
             {project.title}
           </h4>
-          <p className="text-gray-500 text-base max-w-lg">{project.description}</p>
+          <p className="max-w-lg text-base text-gray-500">{project.description}</p>
           
           {/* UPDATED: View Demo and GitHub Buttons (List Layout) */}
-          <div className="flex space-x-4 mt-4">
+          <div className="flex mt-4 space-x-4">
             {project.liveLink && (
               <a 
                 href={project.liveLink} 
@@ -101,7 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
           <img 
              src={project.imagePath} 
              alt={project.title} 
-             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
+             className="object-cover w-full h-full transition-opacity duration-500 opacity-80 group-hover:opacity-100" 
           />
         </div>
       </div>

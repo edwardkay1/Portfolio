@@ -1,9 +1,8 @@
-import shamiImage from '../assets/shami.png'; // ✅ correct way in Vite
-import owojaImage from '../assets/owojaImage.png'; // ✅ correct way in Vite
-import kamuImage from '../assets/kamuImage.png'; // ✅ correct way in Vite
-import nkoziImage from '../assets/nkozi.png'; // ✅ correct way in Vite
-import oldImage from '../assets/redesign.jpg'; // ✅ correct way in Vite
-
+import shamiImage from '../assets/shami.png'; 
+import owojaImage from '../assets/owojaImage.png'; 
+import kamuImage from '../assets/kamuImage.png'; 
+import nkoziImage from '../assets/nkozi.png'; 
+import oldImage from '../assets/redesign.jpg'; 
 
 export interface Project {
   id: number;
