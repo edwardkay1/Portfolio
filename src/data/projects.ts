@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
   {
     id: 1,
     title: 'Shami Global Shop',
-    client: 'Shami Global Shop',
+    client: 'React Project',
     description:
       'A modern e-commerce website designed to showcase products and enable fast ordering through WhatsApp integration.',
     role: 'Frontend Developer',
@@ -35,7 +35,7 @@ export const projectsData: Project[] = [
   {
     id: 2,
     title: 'Owoja Engineering Systems',
-    client: '@primacysolutions',
+    client: 'WordPress Project',
     description:
       'A professional corporate website built to present company services, projects, and credibility to potential clients.',
     role: 'Frontend Developer',
@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: 'Kamu Eco Resort',
-    client: '@primacysolutions',
+    client: 'WordPress Project',
     description:
       'A visually focused website design highlighting eco-friendly accommodations and nature-driven experiences.',
     role: 'UI / Frontend Design',
@@ -63,7 +63,7 @@ export const projectsData: Project[] = [
   {
     id: 4,
     title: 'Nkozi Mart',
-    client: 'Personal Project',
+    client: 'React Project',
     description:
       'A clean e-commerce interface focused on usability and modern shopping experience for local customers.',
     role: 'Frontend Developer',
@@ -76,7 +76,7 @@ export const projectsData: Project[] = [
   {
     id: 5,
     title: 'Redesign Project',
-    client: 'Personal Project',
+    client: 'Personal Portfolio',
     description:
       'A redesign of my earlier portfolio, reflecting growth in layout structure, visual hierarchy, and UI consistency.',
     role: 'Designer & Developer',
