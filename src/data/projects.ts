@@ -35,7 +35,7 @@ export const projectsData: Project[] = [
   {
     id: 2,
     title: 'Owoja Engineering Systems',
-    client: 'WordPress Project',
+    client: 'WordPress Project @primacyictsolutions',
     description:
       'A professional corporate website built to present company services, projects, and credibility to potential clients.',
     role: 'Frontend Developer',
@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: 'Kamu Eco Resort',
-    client: 'WordPress Project',
+    client: 'WordPress Project @primacyictsolutions',
     description:
       'A visually focused website design highlighting eco-friendly accommodations and nature-driven experiences.',
     role: 'UI / Frontend Design',
