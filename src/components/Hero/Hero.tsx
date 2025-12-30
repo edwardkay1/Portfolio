@@ -25,11 +25,15 @@ const Hero = () => {
             className="px-6 py-3 font-medium text-white transition duration-300 ease-in-out border border-white hover:bg-white hover:text-black">
             View Projects
           </a>
-          <a 
-            href="#contact" 
-            className="px-6 py-3 font-medium text-gray-300 transition duration-300 ease-in-out border border-gray-700 hover:border-white hover:text-white">
-            Book a Call
-          </a>
+          <a
+  href="https://wa.me/256746838046?text=Hello%20Edward%2C%20I%20saw%20your%20portfolio%20and%20I%E2%80%99m%20interested%20in%20a%20website%20that%20orders%20through%20WhatsApp."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 font-medium text-gray-300 transition duration-300 ease-in-out border border-gray-700 hover:border-green-500 hover:text-green-400"
+>
+  Chat on WhatsApp
+</a>
+
 
         </div>
 
