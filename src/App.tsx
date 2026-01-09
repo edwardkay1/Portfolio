@@ -1,132 +1,41 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { useState } from 'react';
+import { Sidebar } from './components/Sidebar';
+import { About } from './components/About';
+import { Resume } from './components/Resume';
+import { Contact } from './components/Contact';
+import { PortfolioGrid } from './components/Portfolio'; // From previous response
 
-// Components
-import Navbar from './components/Nav/Nav'; 
-import Hero from './components/Hero/Hero';
-import Footer from './components/Footer/Footer';
+function App() {
+  const [activeTab, setActiveTab] = useState('About');
 
-// Sections
-import ServicesSection from './sections/ServicesSection';
-import ProjectsSection from './sections/ProjectsSection';
-import ContactSection from './sections/ContactSection'; 
-import FAQSection from './sections/FAQSection';
-import AboutSection from './sections/AboutSection';
-
-const App: React.FC = () => {
   return (
-    <div className="min-h-screen font-sans text-white bg-black scroll-smooth">
-      
-      {/* SEO & Social Tags */}
-      <Helmet>
-        <title>Edward Kayiira | Frontend Web Developer</title>
-        <meta
-          name="description"
-          content="I build modern, responsive websites using React, TypeScript, Tailwind CSS, and WordPress. View projects and book a call."
-        />
-        <meta
-          name="keywords"
-          content="Edward Kayiira, Kayiira Edward, web developer, frontend, React, TypeScript, Tailwind CSS, WordPress, Uganda, portfolio"
-        />
-        <meta name="author" content="Edward Kayiira" />
+    <div className="min-h-screen bg-[#121212] text-gray-300 p-4 lg:p-12 flex flex-col lg:flex-row gap-8 justify-center items-start">
+      <Sidebar />
+      <main className="flex-1 max-w-4xl bg-[#1e1e1f] border border-[#383838] rounded-3xl p-8 lg:p-12 relative">
+        <nav className="lg:absolute top-0 right-0 bg-[#2b2b2c] border-b border-l border-[#383838] rounded-bl-3xl rounded-tr-3xl px-10 py-5 flex gap-8 z-10 overflow-x-auto">
+          {['About', 'Resume', 'Portfolio', 'Blog', 'Contact'].map((tab) => (
+            <button 
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`text-sm font-bold transition-colors ${activeTab === tab ? 'text-[#ffdb70]' : 'text-gray-400 hover:text-gray-200'}`}
+            >
+              {tab}
+            </button>
+          ))}
+        </nav>
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Edward Kayiira | Frontend Web Developer" />
-        <meta
-          property="og:description"
-          content="I create visually stunning, responsive websites using React, TypeScript, Tailwind CSS, and WordPress."
-        />
-        <meta property="og:image" content="https://yourdomain.com/assets/og-image.png" />
-        <meta property="og:url" content="https://yourdomain.com" />
-        <meta property="og:type" content="website" />
+        <header className="mt-8 mb-8 lg:mt-0">
+          <h2 className="mb-4 text-3xl font-bold text-white">{activeTab}</h2>
+          <div className="w-10 h-1.5 bg-[#ffdb70] rounded-full"></div>
+        </header>
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Edward Kayiira | Frontend Web Developer" />
-        <meta
-          name="twitter:description"
-          content="I build modern, responsive websites using React, TypeScript, Tailwind CSS, and WordPress."
-        />
-        <meta name="twitter:image" content="https://yourdomain.com/assets/og-image.png" />
-
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Edward Kayiira",
-            "url": "https://yourdomain.com",
-            "sameAs": [
-              "https://linkedin.com/in/Edwardkay1",
-              "https://github.com/edwardkay1",
-              "https://twitter.com/Edwardkay1",
-              "https://facebook.com/Edwardkay1"
-            ],
-            "jobTitle": "Frontend Web Developer",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Freelance / Self-Employed"
-            },
-            "email": "mailto:edwardbrin1@email.com",
-            "telephone": "+256746838046",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Kampala",
-              "addressCountry": "Uganda"
-            }
-          }
-          `}
-        </script>
-
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "https://yourdomain.com",
-            "name": "Edward Kayiira Portfolio",
-            "description": "One-page portfolio showcasing Edward Kayiira's web development services and projects.",
-            "publisher": {
-              "@type": "Person",
-              "name": "Edward Kayiira"
-            }
-          }
-          `}
-        </script>
-      </Helmet>
-
-      <Navbar /> 
-
-      <main>
-        <section id="home">
-          <Hero />
-        </section>
-
-        <section id="services">
-          <ServicesSection />
-        </section>
-
-        <section id="projects">
-          <ProjectsSection />
-        </section>
-
-        <section id="about">
-          <AboutSection />
-        </section>
-
-        <section id="faqs">
-          <FAQSection />
-        </section>
-
-        <section id="contact">
-          <ContactSection />
-        </section>
+        {activeTab === 'About' && <About />}
+        {activeTab === 'Resume' && <Resume />}
+        {activeTab === 'Portfolio' && <PortfolioGrid />}
+        {activeTab === 'Contact' && <Contact />}
       </main>
-
-      <Footer />
     </div>
   );
-};
+}
 
 export default App;

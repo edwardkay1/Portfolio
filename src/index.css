@@ -1,17 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* For Chrome, Safari, and Opera */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
+:root {
+  --bg-dark: #121212;
+  --card-dark: #1e1e1f;
+  --border-dark: #383838;
+  --accent-yellow: #ffdb70;
 }
 
-/* For IE, Edge, and Firefox */
-.scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+body {
+  margin: 0;
+  /* Use Poppins but ensure it feels like a clean UI font */
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: #d6d6d6;
+  font-size: 16px; /* Increased base font size */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-html {
-  scroll-behavior: smooth;
+
+/* Dev Typography Utility */
+.dev-text {
+  letter-spacing: -0.01em;
+  word-spacing: 0.05em;
 }
+
+/* Rest of your existing scrollbar and animation code... */
