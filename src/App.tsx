@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence,type Variants } from 'framer-motion';
 import { Sidebar } from './components/Sidebar';
 import { About } from './components/About';
 import { Resume } from './components/Resume';
