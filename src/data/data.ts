@@ -4,7 +4,7 @@ export const personalInfo = {
   avatar: "/edward.png",
   email: "edwardbrin1@gmail.com",
   phone: "+256 746 838 046",
-  birthday: "April 4, 2004",
+  birthday: "March 4, 2004",
   location: "Uganda",
   socials: {
     github: "https://github.com/edwardkay1",
