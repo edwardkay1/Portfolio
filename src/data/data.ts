@@ -82,7 +82,7 @@ export const portfolioData = [
   {
     id: 1,
     title: "Manira Store",
-    category: "Startup",                                                                                                                                                                   Luxury resort website with immersive visuals and smooth booking experience for guests.",
+    category: "Startup",
     image: "/manira.png",
     description: "An e-commerce platform for local artisans, offering a seamless shopping experience with fast delivery and secure payments.",
     tech: ["firebase", "typescript", "Nextjs"],
@@ -114,7 +114,7 @@ export const portfolioData = [
     title: "Essimu Management Portal",
     category: "Web Application",
     image: "/essimuPortal.png",
-    description: "The central hub for inventory and order management, giving businesses real-time insights and control.",
+    description: "A management hub for Uganda seller words with multi-seller cart support and a 2-month trial period for new users.",
     tech: ["React", "Firebase", "Cloudinary", "Tailwind"],
     link: "https://essimu-ug.vercel.app/",
     gitLink: "https://github.com/edwardkay1/essimu-ug"
