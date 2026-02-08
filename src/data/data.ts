@@ -81,6 +81,16 @@ export const resumeData = {
 export const portfolioData = [
   {
     id: 1,
+    title: "Manira Store",
+    category: "Startup",                                                                                                                                                                   Luxury resort website with immersive visuals and smooth booking experience for guests.",
+    image: "/manira.png",
+    description: "An e-commerce platform for local artisans, offering a seamless shopping experience with fast delivery and secure payments.",
+    tech: ["firebase", "typescript", "Nextjs"],
+    link: "https://manira.store",
+    gitLink: ""
+  },
+  {
+    id: 2,
     title: "Essimu Uganda | Smart Shop",
     category: "Landing Page",
     image: "/essimu.png",
@@ -88,9 +98,9 @@ export const portfolioData = [
     tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://essimu-ug.vercel.app/",
     gitLink: "https://github.com/edwardkay1/essimu-ug"
-  },
+  },                                                      
   {
-    id: 2,
+    id: 3,
     title: "University Attendance Portal",
     category: "Application",
     image: "/student.png",
@@ -100,7 +110,7 @@ export const portfolioData = [
     gitLink: "https://github.com/edwardkay1/University-Attendance-App"
   },
   {
-    id: 3,
+    id: 4,
     title: "Essimu Management Portal",
     category: "Web Application",
     image: "/essimuPortal.png",
@@ -110,7 +120,7 @@ export const portfolioData = [
     gitLink: "https://github.com/edwardkay1/essimu-ug"
   },
   {
-    id: 4,
+    id: 5,
     title: "Shami Global Shop",
     category: "Web Application",
     image: "/shami.png",
@@ -120,7 +130,7 @@ export const portfolioData = [
     gitLink: "https://github.com/edwardkay1/Shami-Global-shop"
   },
   {
-    id: 5,
+    id: 6,
     title: "Nkozi Mart Online",
     category: "Web Application",
     image: "/nkozi.png",
@@ -130,7 +140,7 @@ export const portfolioData = [
     gitLink: "https://github.com/edwardkay1/Nkozi-Mart"
   },
   {
-    id: 6,
+    id: 7,
     title: "Owoja Engineering",
     category: "WordPress",
     image: "/owoja.png",
@@ -140,7 +150,7 @@ export const portfolioData = [
     gitLink: ""
   },
   {
-    id: 7,
+    id: 8,
     title: "Kamu Eco Resort",
     category: "WordPress",
     image: "/kamu.png",
@@ -148,5 +158,5 @@ export const portfolioData = [
     tech: ["WordPress", "Elementor", "SEO"],
     link: "https://kamuecoresort.com/",
     gitLink: ""
-  },
+  }
 ];
