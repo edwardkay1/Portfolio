@@ -82,7 +82,7 @@ export const portfolioData = [
   {
     id: 1,
     title: "Manira Store",
-    category: "Startup",
+    category: "StartUp",
     image: "/manira.png",
     description: "An e-commerce platform for local artisans, offering a seamless shopping experience with fast delivery and secure payments.",
     tech: ["firebase", "typescript", "Nextjs"],
