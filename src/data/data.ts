@@ -8,7 +8,7 @@ export const personalInfo = {
   location: "Uganda",
   socials: {
     github: "https://github.com/edwardkay1",
-    twitter: "https://x.com/iam_ed_wa_rd",
+    twitter: "https://x.com/edwardkay1_",
     linkedin: "https://www.linkedin.com/in/edwardkay1/",
   },
   whatsapp: "256746838046",
