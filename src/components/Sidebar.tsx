@@ -55,9 +55,12 @@ export const Sidebar = () => (
 
 /**
  * Reusable Contact Item Component
- * @param href - Optional link (mailto, tel, etc)
+ * @param icon - Icon element
+ * @param label - Field label
+ * @param value - Display value
+ * @param href - Optional link (mailto, tel)
  */
-const ContactItem = ({ icon, label, value, href }: { icon: any, label: string, value: string, href?: string }) => (
+const ContactItem = ({ icon, label, value, href }: { icon: JSX.Element; label: string; value: string; href?: string }) => (
   <li className="flex items-center gap-4 group">
     <div className="p-3 bg-[#202022] rounded-xl text-[#ffdb70] shadow-md border border-[#383838] group-hover:bg-[#2b2b2c] transition-colors">
       {icon}
@@ -80,8 +83,10 @@ const ContactItem = ({ icon, label, value, href }: { icon: any, label: string, v
 
 /**
  * Reusable Social Link Component
+ * @param href - Link URL
+ * @param icon - Icon JSX element
  */
-const SocialLink = ({ href, icon }: { href: string, icon: any }) => (
+const SocialLink = ({ href, icon }: { href: string; icon: JSX.Element }) => (
   <a 
     href={href} 
     target="_blank" 

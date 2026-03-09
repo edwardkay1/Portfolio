@@ -98,3 +98,22 @@ export const portfolioData = [
     gitLink: "https://github.com/edwardkay1/Shami-Global-shop"
   }
 ];
+export type Testimonial = {
+  name: string;
+  role: string;
+  avatar: string;
+  text: string;
+};
+
+export type Service = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
+export type AboutData = {
+  description: string[];
+  services: Service[];
+  testimonials: Testimonial[];
+  clients: string[];
+};

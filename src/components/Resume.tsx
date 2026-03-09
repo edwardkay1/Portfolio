@@ -2,6 +2,19 @@ import { resumeData } from '../data/data';
 import { BookOpen, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+// Type definitions for education/experience
+type TimelineItem = {
+  title: string;
+  date: string;
+  desc: string;
+};
+
+type TimelineProps = {
+  title: string;
+  icon: JSX.Element;
+  items: TimelineItem[];
+};
+
 export const Resume = () => (
   <section className="animate-fade-in">
     <Timeline title="Education" icon={<BookOpen size={20} />} items={resumeData.education} />
@@ -29,14 +42,14 @@ export const Resume = () => (
   </section>
 );
 
-const Timeline = ({ title, icon, items }: any) => (
+const Timeline = ({ title, icon, items }: TimelineProps) => (
   <div className="mb-10">
     <div className="flex items-center gap-4 mb-8">
       <div className="p-3 bg-[#202022] rounded-xl text-[#ffdb70] border border-[#383838]">{icon}</div>
       <h3 className="text-xl font-bold text-white">{title}</h3>
     </div>
     <div className="ml-7 border-l border-[#383838] space-y-8">
-      {items.map((item: any, i: number) => (
+      {items.map((item, i) => (
         <div 
           key={i} 
           className="relative pl-8 before:content-[''] before:absolute before:left-[-5px] before:top-1 before:w-[10px] before:h-[10px] before:bg-[#ffdb70] before:rounded-full before:shadow-[0_0_0_4px_#383838]"
