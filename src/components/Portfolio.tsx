@@ -4,19 +4,19 @@ import { Eye, Github, ExternalLink, X } from 'lucide-react';
 import { portfolioData } from '../data/data';
 
 export const PortfolioGrid = () => {
-  const [filter, setFilter] = useState<string>('All');
+  const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<typeof portfolioData[0] | null>(null);
 
-  const categories = ['All', 'Landing Page', 'Web Application', 'WordPress', 'StartUp'];
+  const categories = ['All', 'Web Application', 'Landing Page', 'WordPress', 'StartUp'];
   const filteredProjects = filter === 'All' ? portfolioData : portfolioData.filter(p => p.category === filter);
 
   return (
     <section className="animate-fade-in">
-      {/* Filter Navigation */}
+      {/* Filter */}
       <nav className="flex flex-wrap gap-6 mb-8 text-sm font-medium">
         {categories.map(cat => (
-          <button
-            key={cat}
+          <button 
+            key={cat} 
             onClick={() => setFilter(cat)}
             className={`transition-colors duration-300 ${filter === cat ? 'text-[#ffdb70]' : 'text-gray-400 hover:text-gray-200'}`}
           >
@@ -25,7 +25,7 @@ export const PortfolioGrid = () => {
         ))}
       </nav>
 
-      {/* Grid Layout */}
+      {/* Project Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
         <AnimatePresence mode="popLayout">
           {filteredProjects.map(project => (
@@ -40,12 +40,12 @@ export const PortfolioGrid = () => {
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative overflow-hidden rounded-2xl mb-4 bg-[#2b2b2c] border border-[#383838]">
-                <img
-                  src={project.image}
-                  alt={project.title}
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
                   className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/40 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-[#00000066] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="p-4 bg-[#2b2b2c] rounded-xl text-[#ffdb70] shadow-2xl border border-[#383838]">
                     <Eye size={24} />
                   </div>
@@ -61,11 +61,11 @@ export const PortfolioGrid = () => {
         </AnimatePresence>
       </div>
 
-      {/* Modal */}
+      {/* Project Modal */}
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -73,19 +73,19 @@ export const PortfolioGrid = () => {
               className="absolute inset-0 bg-black/80 backdrop-blur-sm"
             />
 
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 50, scale: 0.9 }}
               className="bg-[#1e1e1f] border border-[#383838] w-full max-w-2xl rounded-3xl overflow-hidden relative shadow-2xl"
             >
-              <button
+              <button 
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 p-2 bg-[#2b2b2c] rounded-xl text-white z-10 hover:text-[#ffdb70] transition-colors border border-[#383838]"
               >
                 <X size={20} />
               </button>
-
+              
               <div className="overflow-y-auto max-h-[90vh]">
                 <img src={selectedProject.image} className="object-cover w-full aspect-video" alt={selectedProject.title} />
                 <div className="p-8">
@@ -94,28 +94,32 @@ export const PortfolioGrid = () => {
                   <p className="mb-6 text-sm leading-relaxed text-gray-400">{selectedProject.description}</p>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {selectedProject.tech?.map(t => (
-                      <span key={t} className="px-3 py-1 bg-[#2b2b2c] border border-[#383838] rounded-full text-[10px] text-white font-medium">{t}</span>
+                      <span key={t} className="px-3 py-1 bg-[#2b2b2c] border border-[#383838] rounded-full text-[10px] text-white font-medium">
+                        {t}
+                      </span>
                     ))}
                   </div>
+
                   <div className="flex flex-col gap-4 sm:flex-row">
                     {selectedProject.gitLink && (
-                      <a
+                      <a 
                         href={selectedProject.gitLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-[#2b2b2c] border border-[#383838] py-3 rounded-2xl flex items-center justify-center gap-2 text-white font-bold hover:bg-[#333335] transition-all"
                       >
-                        <Github size={18} /> GitHub
+                        <Github size={18}/> GitHub
                       </a>
                     )}
+                    
                     {selectedProject.link && (
-                      <a
+                      <a 
                         href={selectedProject.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-[#ffdb70] py-3 rounded-2xl flex items-center justify-center gap-2 text-black font-bold hover:bg-[#ffd34d] transition-all shadow-[0_0_20px_rgba(255,219,112,0.2)]"
                       >
-                        <ExternalLink size={18} /> Live Preview
+                        <ExternalLink size={18}/> Live Preview
                       </a>
                     )}
                   </div>
