@@ -98,7 +98,7 @@ export const portfolioData = [
     tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://essimu-ug.vercel.app/",
     gitLink: "https://github.com/edwardkay1/essimu-ug"
-  },                                                      
+  },
   {
     id: 3,
     title: "University Attendance Portal",
